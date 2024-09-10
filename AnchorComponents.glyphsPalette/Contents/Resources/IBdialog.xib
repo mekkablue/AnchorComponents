@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23094" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23094"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AnchorComponents">
+            <connections>
+                <outlet property="anchorNameField" destination="tgf-Jp-wmn" id="0aJ-X2-k1t"/>
+                <outlet property="compNameField" destination="xmJ-rn-hjB" id="MHC-SA-eXc"/>
+                <outlet property="dialog" destination="1" id="Tkv-lP-HY5"/>
+                <outlet property="propagateButton" destination="Pl5-jE-hXP" id="aVp-ag-6jf"/>
+                <outlet property="textField" destination="xmJ-rn-hjB" id="mpt-n7-s9B"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1" customClass="GSPaletteView">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-rn-hjB">
+                    <rect key="frame" x="2" y="28" width="144" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="center" title="Component" usesSingleLineMode="YES" id="HCc-E1-WPp">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <comboBox focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-Jp-wmn">
+                    <rect key="frame" x="3" y="8" width="78" height="15"/>
+                    <comboBoxCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="no anchor" drawsBackground="YES" numberOfVisibleItems="10" id="JE5-1Z-TA6">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="anchorComponent:" target="-2" id="yG3-E3-ZrO"/>
+                    </connections>
+                </comboBox>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pl5-jE-hXP">
+                    <rect key="frame" x="81" y="7" width="64" height="16"/>
+                    <buttonCell key="cell" type="push" title="Propagate" bezelStyle="rounded" alignment="center" controlSize="mini" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ICw-1J-WiJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="propagate:" target="-2" id="acn-ll-d9G"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tgf-Jp-wmn" firstAttribute="top" secondItem="xmJ-rn-hjB" secondAttribute="bottom" constant="6" id="9XZ-oq-3Zg"/>
+                <constraint firstAttribute="trailing" secondItem="Pl5-jE-hXP" secondAttribute="trailing" constant="5" id="CeB-We-GOs"/>
+                <constraint firstItem="xmJ-rn-hjB" firstAttribute="leading" secondItem="tgf-Jp-wmn" secondAttribute="leading" id="DXd-xI-uk9"/>
+                <constraint firstItem="tgf-Jp-wmn" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="4" id="MUJ-Yr-Zf6"/>
+                <constraint firstItem="xmJ-rn-hjB" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="QN5-Po-Go1"/>
+                <constraint firstItem="tgf-Jp-wmn" firstAttribute="top" secondItem="xmJ-rn-hjB" secondAttribute="bottom" constant="6" id="TKK-aP-kTY"/>
+                <constraint firstItem="tgf-Jp-wmn" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="vT7-bU-GIj"/>
+                <constraint firstItem="xmJ-rn-hjB" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="4" id="wHC-eR-gqb"/>
+                <constraint firstItem="tgf-Jp-wmn" firstAttribute="top" secondItem="Pl5-jE-hXP" secondAttribute="top" id="wJc-uP-bfY"/>
+                <constraint firstItem="Pl5-jE-hXP" firstAttribute="leading" secondItem="tgf-Jp-wmn" secondAttribute="trailing" constant="5" id="y7H-na-8Yl"/>
+            </constraints>
+            <connections>
+                <outlet property="_controller" destination="-2" id="jOT-R9-oyt"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="136"/>
+        </customView>
+    </objects>
+</document>
