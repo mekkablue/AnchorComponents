@@ -76,15 +76,15 @@ class AnchorComponents (PalettePlugin):
 		if thisLayer is None:
 			self.propagateButton.setEnabled_(False)
 			return
-		
+
 		self.propagateButton.setEnabled_(True)
 		if thisLayer.selection is None:
 			return
-		
+
 		newAnchor = None
 		if self.anchorNameField.stringValue():
 			newAnchor = self.anchorNameField.stringValue()
-		
+
 		for selectedComponent in thisLayer.components:
 			if selectedComponent.selected and selectedComponent.name == self.compNameField.stringValue():
 				selectedComponent.anchor = newAnchor
@@ -106,19 +106,19 @@ class AnchorComponents (PalettePlugin):
 					if selectedComponent in layer.selection:
 						self.compNameField.setStringValue_(selectedComponent.name)
 						self.anchorNameField.removeAllItems()
-						
+
 						if selectedComponent.anchor:
 							self.anchorNameField.setStringValue_(selectedComponent.anchor)
 						else:
 							self.anchorNameField.setStringValue_("")
-							
+
 						listOfAnchors = []
 						for otherComponent in layer.components:
 							relevantAnchors = [a.name for a in otherComponent.componentLayer.anchors if not a.name.startswith("_") and not a.name.startswith("#_") and not "entry" in a.name]
 							listOfAnchors.extend(relevantAnchors)
 						listOfAnchors = sorted(set(listOfAnchors))
 						self.anchorNameField.addItemsWithObjectValues_(listOfAnchors)
-							
+
 						return
 
 		self.compNameField.setStringValue_("(select a component)")
