@@ -12,7 +12,6 @@
                 <outlet property="compNameField" destination="xmJ-rn-hjB" id="MHC-SA-eXc"/>
                 <outlet property="dialog" destination="1" id="Tkv-lP-HY5"/>
                 <outlet property="propagateButton" destination="Pl5-jE-hXP" id="aVp-ag-6jf"/>
-                <outlet property="textField" destination="xmJ-rn-hjB" id="mpt-n7-s9B"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
