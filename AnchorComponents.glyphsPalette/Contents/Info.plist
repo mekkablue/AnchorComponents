@@ -13,15 +13,15 @@
 	<key>CFBundleName</key>
 	<string>AnchorComponents</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string> <!-- 1.0 -->
+	<string>1.0.1</string> <!-- 1.0 -->
 	<key>CFBundleVersion</key>
-	<string>3</string> <!-- 123 -->
+	<string>4</string> <!-- 123 -->
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/mekkablue/AnchorComponents/master/AnchorComponents.glyphsPalette/Contents/Info.plist</string>
 	<key>productPageURL</key>
 	<string>https://github.com/mekkablue/AnchorComponents</string>
 	<key>productReleaseNotes</key>
-	<string>Initial Release, thx Ahmad Hindi for idea</string>
+	<string>Respect nested (‘traversing’) anchors</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright, Rainer Erich Scheichelbauer, 2024</string>
 	<key>NSPrincipalClass</key>

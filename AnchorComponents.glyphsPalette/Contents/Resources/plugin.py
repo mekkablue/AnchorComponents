@@ -118,7 +118,7 @@ class AnchorComponents (PalettePlugin):
 							if componentLayer is None:
 								print("!! Problem with component %s in %s" % (otherComponent.componentName, layer.parent.name))
 								continue
-							relevantAnchors = [a.name for a in componentLayer.anchors if not a.name.startswith("_") and not a.name.startswith("#_") and "entry" not in a.name]
+							relevantAnchors = [a.name for a in (componentLayer.anchorsTraversingComponents() or componentLayer.anchors) if not a.name.startswith("_") and not a.name.startswith("#_") and "entry" not in a.name]
 							listOfAnchors.extend(relevantAnchors)
 						listOfAnchors = sorted(set(listOfAnchors))
 						self.anchorNameField.addItemsWithObjectValues_(listOfAnchors)
